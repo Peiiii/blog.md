@@ -1,15 +1,21 @@
 import fire
 import toml
-from mdblog.config import CONFIG
+
 class Cli:
     @staticmethod
     def run(config=None):
+        from mdblog.config import CONFIG
+
+        print(config)
         if config:
             CONFIG.update(**toml.load(config))
-        from mdblog import start_server
-        start_server()
+        print(CONFIG)
+        import mdblog
+        # from mdblog.config import CONFIG
+        # print(CONFIG)
+        mdblog.start_server()
 def main():
     fire.Fire(Cli)
-
+    # Cli.run()
 if __name__ == '__main__':
     main()
