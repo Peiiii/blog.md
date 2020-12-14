@@ -9,7 +9,7 @@ env=Environment(loader=FileSystemLoader(cfg.PKG_TEMPLATE_DIR))
 def get_true_path(user,relpath):
     base_dirs = {
         "static":cfg.PKG_STATIC_DIR,
-        "user/file":CONFIG['DATA_PATH'],
+        "user/file":CONFIG['DATA_DIR'],
     }
     root_path=base_dirs[user]
     return join_path(root_path,relpath)

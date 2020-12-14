@@ -9,7 +9,7 @@ PKG_TEMPLATE_DIR=os.path.join(PKG_ROOT_DIR,'data','templates')
 
 
 CONFIG=dict(
-    DATA_PATH='./',
+    DATA_DIR='./',
     HOST='0.0.0.0',
     PORT=8000
 )

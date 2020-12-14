@@ -8,6 +8,7 @@ class Cli:
 
         print(config)
         if config:
+            print('will update:',toml.load(config))
             CONFIG.update(**toml.load(config))
         print(CONFIG)
         import mdblog
