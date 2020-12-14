@@ -6,6 +6,7 @@ import os
 
 def start_server():
     app = Sanic()
-    bp_view=bp_wrappers.wrap_md_viewer(Blueprint('bp_view',url_prefix='/'))
-    app.blueprint(bp_view)
+    # bp_view=bp_wrappers.wrap_md_viewer(Blueprint('bp_view',url_prefix='/'))
+    # app.blueprint(bp_view)
+    app=bp_wrappers.wrap_md_viewer(app)
     app.run(host=CONFIG['HOST'],port=CONFIG['PORT'])

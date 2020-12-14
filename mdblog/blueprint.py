@@ -73,12 +73,13 @@ class bp_wrappers:
     @staticmethod
     def wrap_md_viewer(bp,static_dir=cfg.PKG_STATIC_DIR):
         assert isinstance(bp, (Blueprint,Sanic))
+        bp.static('/static',static_dir)
         @bp.route('/')
         async def do_root(request):
             return response.redirect('/user/')
-        @bp.route('/static/<path:path>')
-        async def do_file_get(request,path):
-            return await services.send_file('static',path)
+        # @bp.route('/static/<path:path>')
+        # async def do_file_get(request,path):
+        #     return await services.send_file('static',path)
         @bp.route('/user/file/<path:path>')
         async def do_file_get(request,path):
             return await services.send_file('user/file',path)
