@@ -1,0 +1,11 @@
+{
+  "author": "Wang Pei",
+  "author_email": "1535376447@qq.com",
+  "pkg_name": "mdblog",
+  "pkg_desc": "markdown blog server",
+  "url": "http://github.com/Peiiii/blog.md",
+  "remote_url": "git@github.com:Peiiii/blog.md",
+  "install_requires": [
+    "sanic"
+  ]
+}
